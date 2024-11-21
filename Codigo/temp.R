@@ -5,8 +5,8 @@ library(htmltools) # Herramientas para manipulación de contenido HTML
 library(RColorBrewer) # Biblioteca para paletas de colores
 
 # Cargar los rásteres
-tempr2023 <- rast('LST_Landsat-2.tif') # Temperatura de 2023
-tempr2014 <- rast('LST_Landsat2014.tif') # Temperatura de 2014
+tempr2023 <- rast('../viz_geo_temp/archivos/LST_Landsat-2.tif') # Temperatura de 2023
+tempr2014 <- rast('../viz_geo_temp/LST_Landsat2014.tif') # Temperatura de 2014
 
 # Reescalar (agregar) ambos rásteres para mejor rendimiento
 tempr2023_resampled <- aggregate(tempr2023, fact = 2) # Reduce la resolución del ráster 2023
